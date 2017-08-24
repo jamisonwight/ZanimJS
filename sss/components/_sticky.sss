@@ -1,0 +1,64 @@
+.sticky-top,
+.sticky-right,
+.sticky-bottom_in,
+.sticky-bottom_out,
+.sticky-left
+  position: fixed !important
+
+// Sticky Bottom
+.sticky-bottom_in
+  width: 100% 
+  animation: stickyBottomIn var(--animDuration) var(--animEase)
+  bottom: 0
+  background: rgb(255,226,138)
+  z-index: 30
+
+.sticky-bottom_out
+  width: 100% 
+  animation: stickyBottomOut .15s ease-out
+  bottom: 0
+  transform: translateY(6rem)
+  background: rgb(255,226,138)
+  z-index: 30
+
+.sticky-bottom_static
+  animation: stickyBottomStatic .8s ease-in
+
+@keyframes stickyBottomIn
+  from 
+    transform: translateY(7rem)
+  to 
+    transform: translateY(0)
+@keyframes stickyBottomOut
+  from 
+    transform: translateY(0)
+  to 
+    transform: translateY(6rem)
+@keyframes stickyBottomStatic
+  from 
+    opacity: 0
+  to 
+    opacity: 1
+
+
+
+
+@keyframes stickyTop 
+  from 
+    top: -30%
+    opacity: 0
+  to 
+    top: 0
+    opacity: 1
+  
+@keyframes stickyRight
+  from 
+    right: -30%
+  to
+    right: 0
+
+@keyframes stickyLeft
+  from
+    left: -30%
+  to
+    left: 0

@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     sourcemaps = require('gulp-sourcemaps'),
     gutil = require("gulp-util"),
-    nested = require('postcss-nested');
+    nested = require('postcss-nested'),
     rename = require('gulp-rename');
 
 gulp.task('default', ['watch:js', 'watch:sss']);
@@ -16,8 +16,8 @@ gulp.task('sugarss', function () {
         require('postcss-cssnext'),
         require('postcss-nested'),
         require('lost'),
-        require('postcss-import-url'),
-        
+        require('postcss-import-url'), 
+        require('precss'),  
     ];
     return gulp.src('sss/zanim.sss')
         .pipe(postcss(plugins, { parser: sugarss }))
